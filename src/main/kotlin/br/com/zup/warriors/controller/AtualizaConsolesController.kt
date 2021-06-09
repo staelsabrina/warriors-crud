@@ -1,6 +1,5 @@
 package br.com.zup.warriors.controller
 
-import br.com.zup.warriors.dto.ConsoleResponse
 import br.com.zup.warriors.dto.NovosDadosRequest
 import br.com.zup.warriors.service.ConsoleService
 import io.micronaut.http.HttpResponse
@@ -8,8 +7,6 @@ import io.micronaut.http.HttpStatus
 import io.micronaut.http.annotation.Controller
 import io.micronaut.http.annotation.PathVariable
 import io.micronaut.http.annotation.Put
-import java.lang.Exception
-import java.lang.RuntimeException
 import javax.inject.Inject
 
 @Controller("/api/consoles")

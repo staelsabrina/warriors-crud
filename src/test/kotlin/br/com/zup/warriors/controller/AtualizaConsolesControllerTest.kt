@@ -19,9 +19,9 @@ internal class AtualizaConsolesControllerTest(
 
     /**
      * Cenários de Teste
-     * 1 - atualiza os dados de um console com sucesso
-     * 2 - nao altera dados do console quando nao forem passados dados novos
-     * 3 - retorna not found quando nao for informado um id cadastrado no banco de dados
+     * 1 - deve atualizar os dados de um console com sucesso
+     * 2 - nao deve alterar dados do console quando nao forem passados dados novos
+     * 3 - deve retornar not found quando id passado nao estiver cadastrado no banco de dados
      */
 
     @BeforeEach

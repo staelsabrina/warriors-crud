@@ -19,6 +19,13 @@ internal class CadastroConsolesTest(
     @Inject private val cadastraController: CadastroConsolesController
 ) {
 
+    /**
+     * Canários de teste
+     * 1 - deve cadastrar um novo console
+     * 2 - nao deve cadastrar um novo console quando campos obrigatorios estiverem vazios ou nulos
+     * 3 - nao deve cadastrar quando data de lancamento for uma data no futuro
+     */
+
     @BeforeEach
     fun setUp(){
         repository.deleteAll()

@@ -7,7 +7,6 @@ import io.micronaut.http.HttpStatus
 import io.micronaut.http.annotation.Controller
 import io.micronaut.http.annotation.Get
 import io.micronaut.http.annotation.PathVariable
-import java.lang.RuntimeException
 import javax.inject.Inject
 
 @Controller("/api/consoles/consulta")

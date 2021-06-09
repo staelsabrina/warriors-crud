@@ -18,6 +18,14 @@ internal class ConsultaConsolesControllerTest(
     @Inject private val consultaController: ConsultaConsolesController
 ){
 
+    /**
+     * Canários de teste
+     * 1 - deve encontrar um console pelo id
+     * 2 - deve retornar todos os consoles cadastrados
+     * 3 - deve retornar uma lista vazia quando nao houverem consoles cadastrados
+     * 4 - nao deve retornar um console quando o id nao estiver cadastrado
+     */
+
     @BeforeEach
     fun setUp(){
         repository.deleteAll()
