@@ -1,3 +1,3 @@
-package br.com.zup.warriors.utils
+package br.com.zup.warriors.exception
 
 class ConsoleNaoEncontradoException(message: String): RuntimeException(message)

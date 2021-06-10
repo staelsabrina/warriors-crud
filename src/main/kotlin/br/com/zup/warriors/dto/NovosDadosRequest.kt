@@ -4,11 +4,8 @@ import io.micronaut.core.annotation.Introspected
 import java.time.LocalDate
 
 @Introspected
-class NovosDadosRequest(
-    val nome: String? = null,
-    val marca : String? = null,
+data class NovosDadosRequest(
+    val nome: String = "",
+    val marca : String = "",
     val dataLancamento : LocalDate? = null
-) {
-
-
-}
+)

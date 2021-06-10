@@ -10,20 +10,19 @@ import javax.validation.constraints.NotBlank
 import javax.validation.constraints.PastOrPresent
 
 @Entity
-class NovoConsole(
+class Console(
     @field:NotBlank
     var nome: String,
     @field:NotBlank
     var marca: String,
     @field:PastOrPresent
     var dataLancamento: LocalDate?,
-) {
 
     @Id
     @GeneratedValue
-    var id: Long? = null
-
+    var id: Long? = null,
     val dataCadastro: LocalDate = LocalDate.now()
+) {
 
     fun toDto(): ConsoleResponse{
         return ConsoleResponse(
@@ -34,17 +33,4 @@ class NovoConsole(
             dataCadastro = dataCadastro.toString()
         )
     }
-
-    fun atualiza(novosDados: NovosDadosRequest) {
-        if (novosDados.nome != null && novosDados.nome != "") {
-            nome = novosDados.nome
-        }
-        if (novosDados.marca != null && novosDados.marca != "") {
-            marca = novosDados.marca
-        }
-        if (novosDados.dataLancamento != null) {
-            dataLancamento = novosDados.dataLancamento
-        }
-    }
-
 }

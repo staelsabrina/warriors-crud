@@ -3,10 +3,10 @@ package br.com.zup.warriors.dto
 import io.micronaut.core.annotation.Introspected
 
 @Introspected
-class ConsoleResponse(
-    val id: Long,
-    val nome: String,
-    val marca: String,
+data class ConsoleResponse(
+    val id: Long? = null,
+    val nome: String = "",
+    val marca: String = "",
     val dataLancamento: String?,
     val dataCadastro: String
 ) {

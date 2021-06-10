@@ -1,23 +1,23 @@
 package br.com.zup.warriors.dto
 
-import br.com.zup.warriors.model.NovoConsole
+import br.com.zup.warriors.model.Console
 import io.micronaut.core.annotation.Introspected
 import java.time.LocalDate
 import javax.validation.constraints.NotBlank
 import javax.validation.constraints.PastOrPresent
 
 @Introspected
-data class NovoConsoleRequest(
+data class ConsoleRequest(
     @field:NotBlank
-    val nome: String,
+    val nome: String = "",
     @field:NotBlank
-    val marca: String,
+    val marca: String = "",
     @field:PastOrPresent
     val dataLancamento: LocalDate?
 ) {
 
-    fun paraNovoConsole(): NovoConsole {
-        return NovoConsole(
+    fun paraNovoConsole(): Console {
+        return Console(
             nome = nome,
             marca = marca,
             dataLancamento = dataLancamento
