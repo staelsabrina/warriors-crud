@@ -2,16 +2,14 @@ package br.com.zup.warriors.service
 
 import br.com.zup.warriors.dto.ConsoleResponse
 import br.com.zup.warriors.dto.ConsoleRequest
-import br.com.zup.warriors.dto.NovosDadosRequest
+import br.com.zup.warriors.dto.DadosRequest
 import br.com.zup.warriors.repository.ConsoleRepository
 import br.com.zup.warriors.exception.ConsoleNaoEncontradoException
 import br.com.zup.warriors.utils.ConsoleUtils
-import io.micronaut.http.HttpResponse
 import io.micronaut.validation.Validated
 import javax.inject.Inject
 import javax.inject.Singleton
 import javax.transaction.Transactional
-import javax.validation.Valid
 
 @Transactional
 @Validated
@@ -21,7 +19,7 @@ class ConsoleServiceImpl : ConsoleService {
     @Inject
     lateinit var repository: ConsoleRepository
 
-    override fun atualizaConsole(id: Long, novosDados: NovosDadosRequest): ConsoleResponse {
+    override fun atualizaConsole(id: Long, novosDados: DadosRequest): ConsoleResponse {
         val possivelConsole = repository.findById(id)
         if(possivelConsole.isEmpty){
             throw ConsoleNaoEncontradoException("Console inexistente no banco de dados")

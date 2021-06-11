@@ -1,13 +1,13 @@
 package br.com.zup.warriors.utils
 
-import br.com.zup.warriors.dto.NovosDadosRequest
+import br.com.zup.warriors.dto.DadosRequest
 import br.com.zup.warriors.model.Console
 
 class ConsoleUtils {
 
     companion object {
 
-        fun atualiza(console: Console, novosDados: NovosDadosRequest): Console {
+        fun atualiza(console: Console, novosDados: DadosRequest): Console {
             if (novosDados.nome != null && novosDados.nome != "") {
                 console.nome = novosDados.nome
             }

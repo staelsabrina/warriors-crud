@@ -2,7 +2,7 @@ package br.com.zup.warriors.controller
 
 import br.com.zup.warriors.dto.ConsoleResponse
 import br.com.zup.warriors.dto.ConsoleRequest
-import br.com.zup.warriors.dto.NovosDadosRequest
+import br.com.zup.warriors.dto.DadosRequest
 import br.com.zup.warriors.service.ConsoleService
 import io.micronaut.http.HttpResponse
 import io.micronaut.http.HttpStatus
@@ -19,7 +19,7 @@ class ConsolesController {
     lateinit var service: ConsoleService
 
     @Put("/{id}")
-    fun atualizaConsole(@PathVariable id: Long, novosDados: NovosDadosRequest): HttpResponse<Any> {
+    fun atualizaConsole(@PathVariable id: Long, novosDados: DadosRequest): HttpResponse<Any> {
 
         val atualizado = try {
             service.atualizaConsole(id, novosDados)

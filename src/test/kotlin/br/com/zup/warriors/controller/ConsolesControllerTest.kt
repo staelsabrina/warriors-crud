@@ -2,7 +2,7 @@ package br.com.zup.warriors.controller
 
 import br.com.zup.warriors.dto.ConsoleRequest
 import br.com.zup.warriors.dto.ConsoleResponse
-import br.com.zup.warriors.dto.NovosDadosRequest
+import br.com.zup.warriors.dto.DadosRequest
 import br.com.zup.warriors.model.Console
 import br.com.zup.warriors.repository.ConsoleRepository
 import io.micronaut.http.HttpStatus
@@ -42,7 +42,7 @@ internal class ConsolesControllerTest {
                 )
             ).id
 
-            val novosDados = NovosDadosRequest(
+            val novosDados = DadosRequest(
                 nome = "Sega Genesis",
                 "Sega",
                 dataLancamento = LocalDate.of(1988, 10, 29)
@@ -71,7 +71,7 @@ internal class ConsolesControllerTest {
                 )
             ).id
 
-            val novosDados = NovosDadosRequest(
+            val novosDados = DadosRequest(
                 nome = "",
                 "",
                 dataLancamento = null
@@ -91,7 +91,7 @@ internal class ConsolesControllerTest {
         @Test
         fun `deve retornar not found quando id passado nao estiver cadastrado no banco de dados`(){
             //cenário
-            val novosDados = NovosDadosRequest(
+            val novosDados = DadosRequest(
                 nome = "Mega Drive",
                 marca = "Sega",
                 dataLancamento = LocalDate.of(1988, 10, 29)

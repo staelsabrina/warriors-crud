@@ -1,7 +1,6 @@
 package br.com.zup.warriors.model
 
 import br.com.zup.warriors.dto.ConsoleResponse
-import br.com.zup.warriors.dto.NovosDadosRequest
 import java.time.LocalDate
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue
