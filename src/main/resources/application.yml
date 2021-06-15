@@ -1,0 +1,18 @@
+micronaut:
+  application:
+    name: videogames
+  server:
+    port: 8080
+
+cassandra:
+  default:
+    basic:
+      contact-points:
+        - "127.0.0.1:9042"
+      session-keyspace: console
+      load-balancing-policy:
+        local-datacenter: datacenter1
+
+endpoint:
+  health:
+    enable: true
